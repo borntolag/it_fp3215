@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Invitation Page</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <a class="logo" href="index.html">CapellaVolunteers<span class="dotcom">.org</span></a>
+        </div>
+        <nav>
+            <ul class="topnav">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li><a href="invitation.html" class="active">Invitation</a>
+                </li>
+                <li><a href="gallery.html">Gallery</a>
+                </li>
+                <li><a href="registration.html">Registration</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+	
+	<!-- Add external javascript file for code -->
+	
+	<script src="js/formvalidation.js"> </script>
+    
+	<!-- Add ID's for each field so that they can be referenced in Javascript -->
+	
+	<section id="pageForm">
+        <form action="#">
+            <label for="recipientName">Recipient name:</label>
+            <input type="text" name="recipientName" placeholder="Enter your Recipient Name" id="rName"  />
+
+            <label for="organizationName">Organization name:
+            </label>
+            <input type="text" name="organizationName" placeholder="Enter your Organization Name" id="oName" />
+
+            <label for="eventDate">Event Date:
+            </label>
+            <input type="text" name="eventDate" placeholder="Enter your Event Date" id="eDate" />
+
+            <label for="websiteURL">URL:
+            </label>
+            <input type="text" name="websiteURL" placeholder="Enter your Website URL" id="wURL" />
+
+            <label for="hostName">Host name:
+            </label>
+            <input type="text" name="hostName" placeholder="Host Name" id="hName"/>
+			<!-- Changed to button so that onclick event will call javascript function -->
+            <input type="button" value="Submit" onclick="formValidation()">
+        </form>
+    </section>
+
+
+    <article id="placeholderContent">
+        Hello <span id="recipientName">recipientName</span>!
+        <br/>
+        <br/> You have been invited to volunteer for an event held by <span id="organizationName">organizationName</span> on <span id="eventDate">eventDate</span>. Please come to the following website: <span id="websiteURL">websiteURL</span> to sign up as a volunteer.
+        <br/>
+        <br/> Thanks!
+        <br/>
+        <br/>
+        <span id="hostName">hostName</span>
+    </article>
+    <footer>This events site is for IT-FP3215 tasks.
+    </footer>
+</body>
+
+</html>
