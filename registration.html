@@ -5,7 +5,8 @@
     <title>Invitation Page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
-
+<!-- Add external javascript file for code -->
+<script src="js/regvalidation.js"> </script>
 <body>
     <header>
         <div class="top">
@@ -26,7 +27,8 @@
         </nav>
     </header>
     <section id="pageForm">
-        <form action="#">
+		<!-- call checkform to validate post and post to confirm.html -->
+        <form action="interests.html" onsubmit="return checkForm(this);" method="link">
             <label for="userName">Username:</label>
             <input type="text" name="userName" placeholder="Enter your Username" />
 
@@ -42,7 +44,7 @@
             </label>
             <input type="text" name="firstName" placeholder="Enter your First Name" />
 
-            <label for="hostName">Last Name:
+            <label for="lastName">Last Name:
             </label>
             <input type="text" name="lastName" placeholder="Enter your Last Name" />
             <label for="email">Email:
@@ -50,7 +52,7 @@
             <input type="text" name="email" placeholder="Enter your Email Address" />
 			<label for="phoneNumber">Phone Number
             </label>
-            <input type="text" name="lastName" placeholder="Enter your Phone Number" />
+            <input type="text" name="phoneNumber" placeholder="Enter your Phone Number" />
 			<label for="signUpNewsletter">Sign up for newsletter:
             </label>
 			  <input type="radio" name="signUpNewsletter" value="Yes" checked> Yes 
@@ -59,8 +61,8 @@
         </form>
     </section>
 
-    <footer>This events site is for IT-FP3215 tasks.
-    </footer>
+ <!--   <footer>This events site is for IT-FP3215 tasks.
+    </footer>  -->
 </body>
 
 </html>

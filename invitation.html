@@ -34,9 +34,16 @@
 	
 	<section id="pageForm">
         <form action="#">
-            <label for="recipientName">Recipient name:</label>
-            <input type="text" name="recipientName" placeholder="Enter your Recipient Name" id="rName"  />
-
+			<!-- Input Box for number of recipients to enter, capture OnKeyDown
+				 event and if 'enter' key then call function to create specified number
+				 of input boxes for names -->
+			<label for="numRecipients">Number of Recipients:</label>
+			<input type="number" name="numRecipients" placeholder="Enter the number of Recipients" id="numR" onKeyDown="if(event.keyCode==13) createRecipentNameInputs('invitees');" />
+	<!--comment -->		
+			<div id="invitees">
+				<label for="recipientName[]">Recipient name:</label>
+				<input class="volunteers" type="text" name="recipientName[]" placeholder="Enter your Recipient Name" id="rName[]" />
+			</div>
             <label for="organizationName">Organization name:
             </label>
             <input type="text" name="organizationName" placeholder="Enter your Organization Name" id="oName" />
@@ -53,23 +60,15 @@
             </label>
             <input type="text" name="hostName" placeholder="Host Name" id="hName"/>
 			<!-- Changed to button so that onclick event will call javascript function -->
-            <input type="button" value="Submit" onclick="formValidation()">
+            <input type="button" value="Submit" onclick="displayInvitations('placeholderContent');">
         </form>
     </section>
 
 
     <article id="placeholderContent">
-        Hello <span id="recipientName">recipientName</span>!
-        <br/>
-        <br/> You have been invited to volunteer for an event held by <span id="organizationName">organizationName</span> on <span id="eventDate">eventDate</span>. Please come to the following website: <span id="websiteURL">websiteURL</span> to sign up as a volunteer.
-        <br/>
-        <br/> Thanks!
-        <br/>
-        <br/>
-        <span id="hostName">hostName</span>
     </article>
-    <footer>This events site is for IT-FP3215 tasks.
-    </footer>
+ <!--   <footer>This events site is for IT-FP3215 tasks.
+    </footer>  -->
 </body>
 
 </html>

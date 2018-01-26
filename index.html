@@ -5,8 +5,11 @@
     <title>Invitation Page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
-
-<body>
+	
+<!-- onload event fires off preloadmyImages -->
+<body onload="preloadMyImages(); rotate();">
+	<!-- Add external javascript file for code -->
+	<script src="js/index.js"> </script>
     <header>
         <div class="top">
             <a class="logo" href="index.html">CapellaVolunteers<span class="dotcom">.org</span></a>
@@ -25,11 +28,11 @@
 
         </nav>
     </header>
+
     <section id="bannerImages">
 	Banner Images<br/>
-<img src="images/banner1.jpg" alt="Banner"/>
-<img src="images/banner2.jpg" alt="Banner"/>
-<img src="images/banner3.jpg" alt="Banner"/>
+<img id="banner" src="images/banner1.jpg" alt="Banner"/>
+
     </section>
 
 

@@ -5,7 +5,8 @@
     <title>Interests Page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
-
+<!-- Add external javascript file for code -->
+<script src="js/queryparser.js"> </script>
 <body>
     <header>
         <div class="top">
@@ -26,27 +27,35 @@
         </nav>
     </header>
     <section id="pageForm">
-        <form action="#">
+        <form name="form1" action="confirm.html" onsubmit="return storeValues(this);" method="post" >
 			
             <!--
 			Include other form fields here
 			
 			-->
-            <input type="hidden" name="userName"/>
-            <input type="hidden" name="password"/>
-            <input type="hidden" name="passwordVerify" />
-            <input type="hidden" name="firstName" />
-            <input type="hidden" name="lastName" />
-            <input type="hidden" name="email"/>
-            <input type="hidden" name="lastName" />
-			<input type="hidden" name="signUpNewsletter"/ >
+            <label for="comments">Comments:
+            </label>
+            <input type="text" name="comments" placeholder="Enter comments" />
+
+            <label for="referredBy">Referred By:
+            </label>
+            <input type="text" name="referredBy" placeholder="Enter who referred you" />			
+			
+            <input type="hidden" id="userName" name="userName"/>
+            <input type="hidden" id="password" name="password"/>
+            <input type="hidden" id="passwordVerify" name="passwordVerify" />
+            <input type="hidden" id="firstName" name="firstName" />
+            <input type="hidden" id="lastName" name="lastName" />
+            <input type="hidden" id="email" name="email"/>
+            <input type="hidden" id="phoneNumber" name="phoneNumber" />
+			<input type="hidden" id="signUpNewsletter" name="signUpNewsletter"/ >
 			
             <input type="submit" value="Register">
         </form>
     </section>
 
-    <footer>This events site is for IT-FP3215 tasks.
-    </footer>
+ <!--   <footer>This events site is for IT-FP3215 tasks.
+    </footer>  -->
 </body>
 
 </html>
